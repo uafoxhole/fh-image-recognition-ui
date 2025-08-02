@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  nextjs:
+    build: .
+    ports:
+      - '80:3000'
+    environment:
+      - NODE_ENV=production
+    networks:
+      - foxhole-intranet
+    restart: 'unless-stopped'
+
+networks:
+  foxhole-intranet:
