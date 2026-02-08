@@ -77,7 +77,7 @@ export const useActivityLogApiWithStatus = () => {
             // Construct Axios config for a POST request
             const config: AxiosRequestConfig = {
               method: 'POST',
-              url: `${process.env.NEXT_PUBLIC_BASE_URL_IMAGE_RECOGNITION_API}api/v1/process/player-activity`, // Use the hardcoded URL
+              url: `https://hq-api.uafoxhole.com/api/v1/process/player-activity`, // Use the hardcoded URL
               data: imageFormData,
               headers: imageFormData instanceof FormData
                 ? { 'Content-Type': 'multipart/form-data' }
